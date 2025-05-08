@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+            cursor: default; /* Default cursor for the body */
+        }
+
+        /* Ensures pointer cursor on clickable elements */
+        nav a, .hover-glow, a {
+            cursor: pointer;  /* Pointer cursor for clickable items */
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-up {
+            animation: slideUp 1s ease-in-out forwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+            transition: 0.3s ease-in-out;
+        }
+
+        .font-bebas {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="text-white">
+    <header class="bg-black p-5 flex justify-between items-center shadow-lg sticky top-0 z-50">
+        <a href="#" class="text-[48px] transition duration-300">
+            <span class="font-bebas text-white">Bala</span>
+            <span class="font-montserrat font-bold bg-yellow-600 text-white px-3 py-1 rounded-md">Ji</span>
+        </a>
+
+        <nav class="space-x-6 hidden md:flex">
+            <a href="#home" class="hover:text-yellow-400 transition duration-300">Home</a>
+            <a href="#about" class="hover:text-yellow-400 transition duration-300">About</a>
+            <a href="#projects" class="hover:text-yellow-400 transition duration-300">Projects</a>
+            <a href="#contact" class="hover:text-yellow-400 transition duration-300">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="py-32 text-center fade-in">
+        <img src="mee.jpg" alt="Profile" class="rounded-full w-40 h-40 mx-auto mb-6 shadow-xl">
+        <h1 class="text-4xl font-bold">Hi , I am  <span>Balaji</span><span class="text-yellow-500"> Rajendran</span></h1>
+        <p class="mt-4 text-lg max-w-2xl mx-auto"> a software developer building responsive web applications with modern tools.</p>
+        <a href="#about" class="inline-block mt-8 px-6 py-2 bg-green-300 rounded-full text-black font-semibold hover:bg-pink-400 hover-glow transition duration-300">About Me</a>
+    </section>
+
+    <section id="about" class="py-20 px-6 bg-gray-800 slide-up">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">About Me</h2>
+            <p class="text-gray-300 mb-10">I'm a person with a keen eye for detail, a relentless drive for learning, and a deep appreciation for elegant design. Whether it’s building sleek web applications, solving problems, or experimenting with amazing tech, I thrive on bringing ideas to life.</p>
+            <h3 class="text-2xl font-semibold mb-6">Skills</h3>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="p-6 bg-gray-700 rounded-lg hover-glow border-2 border-gray-700 hover:border-pink-400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" class="w-12 h-12 mx-auto mb-4">
+                    <h4 class="text-xl font-bold mb-2">HTML</h4>
+                    <p>Semantic, structured web development.</p>
+                </div>
+                <div class="p-6 bg-gray-700 rounded-lg hover-glow border-2 border-gray-700 hover:border-pink-400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="w-12 h-12 mx-auto mb-4">
+                    <h4 class="text-xl font-bold mb-2">CSS</h4>
+                    <p>Responsive and aesthetic styling with animations.</p>
+                </div>
+                <div class="p-6 bg-gray-700 rounded-lg hover-glow border-2 border-gray-700 hover:border-pink-400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="w-12 h-12 mx-auto mb-4">
+                    <h4 class="text-xl font-bold mb-2">JavaScript</h4>
+                    <p>Dynamic and interactive websites.</p>
+                </div>
+                <div class="p-6 bg-gray-700 rounded-lg hover-glow border-2 border-gray-700 hover:border-pink-400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" class="w-12 h-12 mx-auto mb-4">
+                    <h4 class="text-xl font-bold mb-2">React</h4>
+                    <p>Modern UI development with components.</p>
+                </div>
+                <div class="p-6 bg-gray-700 rounded-lg hover-glow border-2 border-gray-700 hover:border-pink-400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" class="w-12 h-12 mx-auto mb-4">
+                    <h4 class="text-xl font-bold mb-2">Next.js</h4>
+                    <p>Server-side rendering and static site generation.</p>
+                </div>
+                <div class="p-6 bg-gray-700 rounded-lg hover-glow border-2 border-gray-700 hover:border-pink-400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" class="w-12 h-12 mx-auto mb-4">
+                    <h4 class="text-xl font-bold mb-2">Tailwind CSS</h4>
+                    <p>Utility-first CSS framework for efficient UI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 px-6 bg-gray-900 fade-in">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Projects</h2>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-glow">
+                    <i class="fas fa-briefcase fa-3x text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">GradeFlow</h3>
+                    <p class="text-sm mb-2">CGPA Calculator</p>
+                    <a href="https://github.com/Balajicg5/cgpa-calculator" target="_blank" class="text-yellow-400 hover:underline">View Project</a>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-glow">
+                    <i class="fas fa-laptop-code fa-3x text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Notee</h3>
+                    <p class="text-sm mb-2">Java-based Text Editor</p>
+                    <a href="https://github.com/Balajicg5/Notepad-texteditor" target="_blank" class="text-yellow-400 hover:underline">View Project</a>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-glow">
+                    <i class="fas fa-pencil-alt fa-3x text-green-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Portfolio</h3>
+                    <p class="text-sm mb-2">Personal Website</p>
+                    <a href="#" class="text-yellow-400 hover:underline">View Project</a>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-glow">
+                    <i class="fas fa-pen-alt fa-3x text-green-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Portfolio</h3>
+                    <p class="text-sm mb-2">Personal Website</p>
+                    <a href="#" class="text-yellow-400 hover:underline">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-6 bg-gray-800 slide-up">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+            <p class="mb-6">Feel free to contact me via email or connect through social platforms.</p>
+            <div class="flex justify-center items-center mb-6">
+                <i class="fas fa-envelope text-2xl mr-4"></i>
+                <a href="mailto:balaji989412@gmail.com" class="text-xl hover:underline">balaji989412@gmail.com</a>
+            </div>
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.facebook.com/share/16N4MeDiaa/" class="text-3xl hover:text-blue-500"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/balaji-rajendran-30a556258" class="text-3xl hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Balajicg5" class="text-3xl hover:text-gray-400"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/balaji.5" class="text-3xl hover:text-pink-400"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 py-4 text-center">
+        <p id="year" class="text-sm text-gray-400"></p>
+        <script>
+            document.getElementById("year").textContent = `\u00A9 ${new Date().getFullYear()} Balaji Rajendran - All Rights Reserved.`;
+        </script>
+    </footer>
+
+</body>
+
+</html>
