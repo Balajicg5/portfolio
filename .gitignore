@@ -29,7 +29,7 @@ build/
 
 # Images or assets (if not needed in the repo)
 *.png
-*.jpg
+
 *.jpeg
 *.gif
 *.ico
